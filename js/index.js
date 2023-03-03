@@ -4,6 +4,7 @@ const index = () =>{
         alert ("Ya estamos aquí");
     }
     else{
+        loading();
         content.innerHTML= `
             <div><h1>Bienvenido a la Heladeria Paco</h1></div>
             <div>
@@ -14,7 +15,8 @@ const index = () =>{
             </div>
         `;
         content.removeAttribute('class');
-        content.classList.add("home")
+        content.classList.add("home");
+        setTimeout(noLoading, 2000);
     }
 }
 
