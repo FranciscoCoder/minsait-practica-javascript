@@ -6,20 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heladeria</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/info.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript"></script>
+    <script src="js/list.js" type="text/javascript"></script>
+    <script src="js/detail.js" type="text/javascript"></script>
 </head>
 <body>
+    <div id="loading">
+        <div>Loading</div>
+    </div>
     <header>
         <div>
-            <h1><a href="">Heladeria Paco</a></h1>
+            <a href="javascript:index()">Heladeria Paco</a>
         </div>
         <div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">List</a></li>
+                <li><a href="javascript:index()">Home</a></li>
+                <li><a href="javascript:list()">List</a></li>
             </ul>
         </div>
     </header>
-    <div id="content"></div>
+    <main id="content"></main>
     <footer>
         <div>
             <ul>
@@ -40,5 +47,9 @@
             </ul>
         </div>
     </footer>
+    <script>
+        index();
+        setTimeout(noLoading, 2000);
+    </script>
 </body>
 </html>
