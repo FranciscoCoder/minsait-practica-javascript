@@ -8,7 +8,7 @@ const detail = (index)=>{
         <div>
             <h1 class="titleSection">${helados[index].nombre}</h1>
             <div class="contentDetails">
-                <div><img src="assets/images/${helados[index].imagen}" /></div>
+                <div><img src="${helados[index].imagen}" /></div>
                 <div><p>${helados[index].descripcion}</p></div>
             </div>
         </div>

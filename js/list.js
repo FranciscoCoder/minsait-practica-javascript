@@ -12,7 +12,7 @@ const list = () => {
                 if(helados[i].imagen!=''){
                     listProduct +=`
                     <div class="product">
-                        <div><a href="javascript:detail(${i})"><img src="assets/images/${helados[i].imagen}" /></a></div>
+                        <div><a href="javascript:detail(${i})"><img src="${helados[i].imagen}" /></a></div>
                         <div><a href="javascript:detail(${i})">${helados[i].nombre}</a></div>
                     </div>
                     `
