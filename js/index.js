@@ -7,10 +7,11 @@ const index = () =>{
         loading();
         content.innerHTML= `
             <div class="titleSection"><h1>Bienvenido a la Heladeria Paco</h1></div>
-            <div>
+            <div class="contentInitial">
                 <p>
                     En esta heladeria encontraras todos tipos de helados y sobre todo de sabores.<br><br>
-                    Mira nuestra amplia gama de sabores.
+                    Mira nuestra amplia gama de sabores.<br><br>
+                    <a href="javascript:list();">Ver sabores</a>
                 </p>
             </div>
         `;
@@ -31,6 +32,7 @@ function verifySection(nameSection){
 
 function loading()
 {
+    window.scrollTo(0,0);
     document.querySelector("html").classList.add("noscroll");
     document.querySelector("#loading").classList.remove('hide');
 }

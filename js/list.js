@@ -17,19 +17,16 @@ const list = () => {
                     </div>
                     `
                 }
-                
             }
         }
         else{
             listProduct=`<div>No hay sabores</div>`;
         }
-
         content.innerHTML=`
         <div>
             <h1 class="titleSection">Lista de sabores</h1>
             <div class="listProduct">${listProduct}</div>
         </div>`;
-    
         content.removeAttribute('class');
         content.classList.add("list");
         setTimeout(noLoading, 2000);

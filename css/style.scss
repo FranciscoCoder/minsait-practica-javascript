@@ -36,9 +36,7 @@ body {
     position: relative;
     overflow-x: hidden;
     background-color: var(--bluecream);
-}
-html{
-    min-height: 100vh;
+    min-height: 100%;
 }
 body {
     font-family: "Barlow Condensed", sans-serif;
@@ -105,7 +103,7 @@ ul {
     background-color: var(--black);
     color: var(--white);
     font-size: 30px;
-
+    transition: opacity 0s;
     div {
         width: 100%;
         @include flex($align: center, $wrap: wrap);
@@ -178,10 +176,24 @@ header {
 main {
     width: 100%;
     min-height: 87vh;
-    padding: 0 5%;
+    padding: 10px 5%;
     .titleSection{
         padding: 20px 0;
         text-align: center;
+    }
+    .contentInitial{
+        p{
+            font-size: 18px;
+            text-align: center;
+            padding: 10px 0;
+            a{
+                color: var(--purplecream);
+                font-weight: bold;
+                &:hover{
+                    color: var(--redcream);
+                }
+            }
+        }
     }
 }
 
@@ -194,7 +206,12 @@ main {
     .product {
         width: 33.33%;
         padding: 0 1% 10px;
-
+        a{
+            color: var(--purplecream);
+            &:hover{
+                color: var(--orangecream);
+            }
+        }
         img {
             width: 100%;
             height: auto;
@@ -211,6 +228,23 @@ main {
         }
     }
 }
+/*DETAILS CSS*/
+.contentDetails{
+    @include flex($align: flex-start, $wrap: wrap);
+    max-width: 90%;
+    margin: 0 auto;
+    div{
+        width: 50%;
+        padding: 10px 5%;
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+}
 
 /*FOOTER CSS*/
 footer {
@@ -218,24 +252,28 @@ footer {
     color: var(--purplecream);
     @include flex($align: center);
     padding: 10px 0;
+    color: var(--purplecream);
+    font-weight: bold;
+    & div {
+        width: 50%;
+        padding: 0%;
+        ul {
+            @include flex($align: center);
+            justify-content: left;
 
-    div {
-        width: 31.33%;
-        padding: 0 1%;
+            li {
+                padding: 0 2%;
 
-        &:first-child {
-            ul {
-                @include flex($align: center);
-                justify-content: center;
-
-                li {
-                    padding: 0 2%;
-
-                    img {
-                        width: 30px;
-                        height: auto;
-                    }
+                img {
+                    width: 30px;
+                    height: auto;
                 }
+            }
+        }
+        &:last-child{
+            ul{
+                justify-content: right;
+                text-align: right;
             }
         }
     }
@@ -252,6 +290,12 @@ footer {
             div:last-child {
                 font-size: 15px;
             }
+        }
+    }
+
+    .contentDetails{
+        div{
+            width: 100%;
         }
     }
 }
